@@ -9,9 +9,9 @@ class Note {
     this.noteheader = document.createElement('div')
     this.noteheader.className = 'noteheader'
     this.notetitle = document.createElement('div')
-    this.notetitle.className = 'noteheader'
+    this.notetitle.className = 'notetitle'
     this.notebody = document.createElement('div')
-    this.notebody.className = 'noteheader'
+    this.notebody.className = 'notebody'
   }
 
 }
@@ -32,6 +32,16 @@ class Notes {
     this.noteToDisplay = this.notesArray[this.notesArray.length - 1]
     console.log(this.noteToDisplay)
     this.noteDiv.appendChild(this.noteToDisplay.note)
+    this.noteToDisplay.note.appendChild(this.noteToDisplay.noteheader)
+    this.noteToDisplay.note.appendChild(this.noteToDisplay.notetitle)
+    this.noteToDisplay.note.appendChild(this.noteToDisplay.notebody)
+
+
+    // <div class="note">
+    //   <div class="noteheader"></div>
+    //   <div class="notetitle" contenteditable="true"> title </div>
+    //   <div class="notebody" contenteditable="true"> note 1 </div>
+    // </div>
 
   }
 }

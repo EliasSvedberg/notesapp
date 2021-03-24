@@ -39,6 +39,8 @@ body {
 }
 
 .notes .note {
+  display: flex;
+  flex-direction: column; 
   width: 200px;
   height: 200px;
   border-radius: 5px;
@@ -53,12 +55,17 @@ body {
 .notes .note .noteheader {
   background-color: #8ee8eb;
   padding: 10px;
+
+}
+
+.notes .note .notetitle {
+  padding: 10px;
+  outline: 0;
 }
 
 .notes .note .notebody {
   padding: 10px;
   padding-top: 20px;
-}
-.notes .note .notetitle {
-  padding: 10px;
+  outline: 0;
+  flex: 1;
 }
