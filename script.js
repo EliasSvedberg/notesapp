@@ -10,8 +10,12 @@ class Note {
     this.noteheader.className = 'noteheader'
     this.notetitle = document.createElement('div')
     this.notetitle.className = 'notetitle'
+    this.notetitle.innerHTML = 'note title'
+    this.notetitle.contentEditable = 'true'
     this.notebody = document.createElement('div')
     this.notebody.className = 'notebody'
+    this.notebody.innerHTML = 'note content'
+    this.notebody.contentEditable = 'true'
   }
 
 }
@@ -35,14 +39,6 @@ class Notes {
     this.noteToDisplay.note.appendChild(this.noteToDisplay.noteheader)
     this.noteToDisplay.note.appendChild(this.noteToDisplay.notetitle)
     this.noteToDisplay.note.appendChild(this.noteToDisplay.notebody)
-
-
-    // <div class="note">
-    //   <div class="noteheader"></div>
-    //   <div class="notetitle" contenteditable="true"> title </div>
-    //   <div class="notebody" contenteditable="true"> note 1 </div>
-    // </div>
-
   }
 }
 

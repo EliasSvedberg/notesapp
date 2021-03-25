@@ -13,15 +13,35 @@ body {
   height: 100%;
 }
 
+.buttoncontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .addbuttondiv {
   display: flex;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.closebuttondiv {
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
 }
 
 .addbuttondiv > button {
+  border-color: #8ee8eb;
+  background-color: #7afcff;
+  box-shadow: 3px 6px 5px #888888;
+  border-radius: 8px;
+  padding: 10px;
+  outline: 0;
+}
+
+.closebuttondiv > button {
   border-color: #8ee8eb;
   background-color: #7afcff;
   box-shadow: 3px 6px 5px #888888;
@@ -40,9 +60,9 @@ body {
 
 .notes .note {
   display: flex;
-  flex-direction: column; 
-  width: 200px;
-  height: 200px;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
   border-radius: 5px;
   padding: 0px;
   margin: 10px;
@@ -61,11 +81,15 @@ body {
 .notes .note .notetitle {
   padding: 10px;
   outline: 0;
+  max-height: 50px;
+  overflow: scroll;
+  font-size: 2em;
 }
 
 .notes .note .notebody {
   padding: 10px;
   padding-top: 20px;
   outline: 0;
+  overflow: scroll;
   flex: 1;
 }
