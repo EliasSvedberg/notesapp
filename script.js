@@ -34,19 +34,30 @@ class Notes {
 
   displayNote() {
     this.noteToDisplay = this.notesArray[this.notesArray.length - 1]
-    console.log(this.noteToDisplay)
     this.noteDiv.appendChild(this.noteToDisplay.note)
     this.noteToDisplay.note.appendChild(this.noteToDisplay.noteheader)
     this.noteToDisplay.note.appendChild(this.noteToDisplay.notetitle)
     this.noteToDisplay.note.appendChild(this.noteToDisplay.notebody)
   }
+
+  clearall () {
+    while (this.noteDiv.firstChild) {
+        this.noteDiv.firstChild.remove()
+    }
+  }
 }
 
 const addButton = document.querySelector('.addbutton')
+const removeButton = document.querySelector('.closeallbutton');
 const notes = new Notes()
 
 addButton.addEventListener('click', button => {
   const note = new Note()
   notes.addNote(note)
   notes.displayNote()
+})
+
+
+removeButton.addEventListener('click', button => {
+  notes.clearall()
 })
