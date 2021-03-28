@@ -73,10 +73,17 @@ body {
 }
 
 .notes .note .noteheader {
+  display: flex;
+  justify-content: flex-end;
   background-color: #8ee8eb;
   padding: 10px;
-
 }
+
+.notes .note .noteheader .closenote {
+  background-color: #8ee8eb;
+  padding: 5px;
+}
+
 
 .notes .note .notetitle {
   padding: 10px;
